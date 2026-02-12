@@ -1,29 +1,22 @@
-#  PDF Collector
+# FileSorter
 
-Tiny shell script that finds and collects all PDF files containing "cv" (case-insensitive) from your Downloads folder and moves/copies them into a dedicated `~/CV_PDFs` folder.
+**A clean and simple GUI tool to copy files from a directory based on file extension and/or name.**
 
-Perfect for people who regularly download CVs/resumés and want them organized automatically.
+Perfect for quickly collecting PDFs, images, resumes, invoices, etc.
 
 ## Features
 
-- Case-insensitive search (`*cv*.pdf`, `*CV*.PDF`, `*Curriculum*.pdf`, etc.)
-- Creates destination folder if it doesn't exist
-- Shows every file it finds and copies
-- Final summary with `ls` output
-- Safe: uses `-print0` / `read -d ''` for filenames with spaces
+- Browse and select source folder
+- Filter by file extension (`.pdf`, `.jpg`, `.docx`, ...)
+- Optional text filter in filename (case-insensitive)
+- Recursive search (includes all subfolders)
+- Creates a new `Sorted_...` folder and **copies** the files (originals stay untouched)
 
-## Installation / Usage
+## Installation
+
+### From source (recommended for now)
 
 ```bash
-# 1. Clone or download
-git clone https://github.com/yourusername/cv-pdf-collector.git
-cd cv-pdf-collector
-
-# 2. Make executable
-chmod +x find-cvs.sh
-
-# 3. Run it
-./find-cvs.sh
-
-# Or run directly without cloning:
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/yourusername/cv-pdf-collector/main/find-cvs.sh)"
+git clone https://github.com/yourusername/filesorter.git
+cd filesorter
+pip install -e .
