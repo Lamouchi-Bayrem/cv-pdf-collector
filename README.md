@@ -1,6 +1,5 @@
 #  PDF Collector
 
-
 Tiny shell script that finds and collects all PDF files containing "cv" (case-insensitive) from your Downloads folder and moves/copies them into a dedicated `~/CV_PDFs` folder.
 
 Perfect for people who regularly download CVs/resumés and want them organized automatically.
